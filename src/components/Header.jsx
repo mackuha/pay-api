@@ -51,10 +51,10 @@ function Header() {
         </Link>
       </div>
       {menuOpen && (
-        <div className="absolute right-0 top-0 z-50 h-screen w-screen">
+        <div className="fixed right-0 top-0 z-50 h-screen w-screen overflow-hidden">
           <div
             onClick={toggleMenu}
-            className="absolute left-0 top-0 h-full w-full cursor-pointer"
+            className="fixed right-0 top-0 h-screen w-screen cursor-pointer overflow-hidden"
           ></div>
           <div className="container absolute right-0 top-0 mx-auto h-full w-10/12 bg-black px-6 pt-12 text-white md:hidden">
             <button className="w-full transition-opacity hover:opacity-50">
