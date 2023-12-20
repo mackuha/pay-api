@@ -16,6 +16,11 @@ PayAPI is a multi-page website developed as a part of the Frontend Mentor challe
 The app is deployed on Netlify. Visit the live site [here.](https://pay-api-mackuha.netlify.app/)
 
 
+## Solution Link
+
+You can take a look at the solution URL [here.](https://www.frontendmentor.io/solutions/responsive-multipage-website-using-react-react-router-and-tailwind-Xe3Bm8UNdM)
+
+
 ## Credits
 
 Special thanks to Frontend Mentor for providing the design and opportunity to work on this challenge.
