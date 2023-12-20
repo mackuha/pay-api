@@ -9,26 +9,16 @@ import linkedinLogo from "/shared/linkedin.svg"
 import logo from "/shared/logo-white.svg"
 
 function Footer() {
-  const [email, setEmail] = useState("")
-  const { pathname, key } = useLocation()
-
-  function handleSubmit(e) {
-    e.preventDefault()
-    setEmail("")
-  }
-
   return (
-    <div>
-      {key !== "default" || key === "undefined" ? (
-        <div className="pb-20">
-          <div className="container mx-auto flex flex-col items-center justify-center px-6 text-center lg:flex-row lg:text-left">
-            <h2 className="lg:w-6/12 xl:w-7/12">Ready to Start?</h2>
-            <div className="mt-6 w-full md:mx-auto md:w-3/4 lg:mt-0 lg:w-6/12 xl:w-5/12">
-              <ScheduleInlineForm />
-            </div>
+    <>
+      <div className="pb-20">
+        <div className="container mx-auto flex flex-col items-center justify-center px-6 text-center lg:flex-row lg:text-left">
+          <h2 className="lg:w-6/12 xl:w-7/12">Ready to Start?</h2>
+          <div className="mt-6 w-full md:mx-auto md:w-3/4 lg:mt-0 lg:w-6/12 xl:w-5/12">
+            <ScheduleInlineForm />
           </div>
         </div>
-      ) : null}
+      </div>
       <footer className="relative z-10 overflow-hidden bg-black pt-10">
         <div className="container mx-auto flex flex-col items-center px-6 pb-10 md:flex-row md:justify-between">
           <div className="items-center justify-center md:flex md:gap-16">
@@ -102,7 +92,7 @@ function Footer() {
           </p>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
