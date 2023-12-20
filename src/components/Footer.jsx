@@ -19,7 +19,7 @@ function Footer() {
 
   return (
     <div>
-      {key !== "default" ? (
+      {key !== "default" || key === "undefined" ? (
         <div className="pb-20">
           <div className="container mx-auto flex flex-col items-center justify-center px-6 text-center lg:flex-row lg:text-left">
             <h2 className="lg:w-6/12 xl:w-7/12">Ready to Start?</h2>
