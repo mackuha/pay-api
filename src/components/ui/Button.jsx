@@ -1,4 +1,5 @@
 import React from "react"
+import { twMerge } from "tailwind-merge"
 
 function Button({ children, variant, className, ...props }) {
   let variantStyles
@@ -15,7 +16,10 @@ function Button({ children, variant, className, ...props }) {
 
   return (
     <button
-      className={`whitespace-nowrap rounded-full px-6 py-4 font-bold transition-all ${className} ${variantStyles}`}
+      className={twMerge(
+        `whitespace-nowrap rounded-full px-6 py-4 font-bold transition-all ${variantStyles}`,
+        className,
+      )}
       {...props}
     >
       {children}

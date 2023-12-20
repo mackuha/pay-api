@@ -1,4 +1,6 @@
-import React, { useState } from "react"
+import React from "react"
+import { Link } from "react-router-dom"
+import { Helmet, HelmetProvider } from "react-helmet-async"
 import phoneMockup from "/home/illustration-phone-mockup.svg"
 import circleBg from "/shared/bg-pattern-circle.svg"
 import easyToImplementImg from "/home/illustration-easy-to-implement.svg"
@@ -8,12 +10,17 @@ import bankingIcon from "/home/icon-banking-and-coverage.svg"
 import paymentsIcon from "/home/icon-consumer-payments.svg"
 import CompanyLogos from "../components/ui/CompanyLogos"
 import Button from "../components/ui/Button"
-import { Link } from "react-router-dom"
 import ScheduleInlineForm from "../components/ui/ScheduleInlineForm"
 
-function Home() {
+function Home({ title, description }) {
   return (
     <div>
+      <HelmetProvider>
+        <Helmet>
+          <title>{title}</title>
+          <meta name="description" content={description} />
+        </Helmet>
+      </HelmetProvider>
       <div className="relative overflow-x-clip">
         <div className="container mx-auto flex flex-col items-center px-6 pb-20 lg:flex-row-reverse lg:pb-10">
           <div className="lg:w-1/2">
@@ -47,6 +54,7 @@ function Home() {
           />
         </div>
       </div>
+
       <div className="relative overflow-hidden bg-black py-20">
         <div className="container mx-auto flex flex-col gap-14 px-6 lg:flex-row-reverse lg:items-center">
           <div className="lg:w-1/2">
@@ -71,6 +79,7 @@ function Home() {
           className="absolute -top-[600px] left-1/2 w-[780px] max-w-none -translate-x-1/2 lg:-top-[400px] lg:left-[100px]"
         />
       </div>
+
       <div className="py-20">
         <div className="container mx-auto space-y-20 px-6">
           <div className="flex flex-col items-center lg:flex-row">
@@ -88,6 +97,7 @@ function Home() {
               </p>
             </div>
           </div>
+
           <div className="relative flex flex-col items-center lg:flex-row-reverse">
             <img
               src={simpleUiImg}
@@ -109,6 +119,7 @@ function Home() {
           </div>
         </div>
       </div>
+
       <div className="pb-24">
         <div className="container mx-auto px-6">
           <div className="grid gap-y-12 md:grid-cols-3 md:items-start md:gap-x-8 xl:gap-x-16">

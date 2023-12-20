@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { Link, NavLink, useLocation } from "react-router-dom"
 import Button from "./ui/Button"
+import ScheduleInlineForm from "./ui/ScheduleInlineForm"
 import circleBg from "/shared/bg-pattern-circle.svg"
 import facebookLogo from "/shared/facebook.svg"
 import twitterLogo from "/shared/twitter.svg"
@@ -22,24 +23,9 @@ function Footer() {
         <div className="pb-20">
           <div className="container mx-auto flex flex-col items-center justify-center px-6 text-center lg:flex-row lg:text-left">
             <h2 className="lg:w-6/12 xl:w-7/12">Ready to Start?</h2>
-            <form
-              onSubmit={handleSubmit}
-              className="mt-6 flex w-full flex-col gap-4 md:mx-auto md:w-3/4 md:flex-row md:gap-0 lg:mt-0 lg:w-6/12 xl:w-5/12"
-            >
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value)
-                }}
-                required
-                placeholder="Enter email address"
-                className="w-full rounded-full py-4 pl-5 font-bold text-blue-900 shadow-xl"
-              />
-              <Button className="w-full shadow-xl md:-ml-10 md:w-auto">
-                Schedule a Demo
-              </Button>
-            </form>
+            <div className="mt-6 w-full md:mx-auto md:w-3/4 lg:mt-0 lg:w-6/12 xl:w-5/12">
+              <ScheduleInlineForm />
+            </div>
           </div>
         </div>
       ) : null}
