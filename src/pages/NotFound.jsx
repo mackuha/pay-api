@@ -10,6 +10,7 @@ function NotFound({ title, description }) {
         <Helmet>
           <title>{title}</title>
           <meta name="description" content={description} />
+          <meta name="prerender-status-code" content="404" />
         </Helmet>
       </HelmetProvider>
       <div className="flex min-h-[70vh] items-center justify-center">
