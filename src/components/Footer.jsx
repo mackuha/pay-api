@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Link, NavLink } from "react-router-dom"
+import { Link, NavLink, useLocation } from "react-router-dom"
 import Button from "./ui/Button"
 import circleBg from "/shared/bg-pattern-circle.svg"
 import facebookLogo from "/shared/facebook.svg"
@@ -9,6 +9,7 @@ import logo from "/shared/logo-white.svg"
 
 function Footer() {
   const [email, setEmail] = useState("")
+  const { pathname, key } = useLocation()
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -17,29 +18,31 @@ function Footer() {
 
   return (
     <div>
-      <div className="pb-20">
-        <div className="container mx-auto flex flex-col items-center justify-center px-6 text-center lg:flex-row lg:text-left">
-          <h2 className="lg:w-6/12 xl:w-7/12">Ready to Start?</h2>
-          <form
-            onSubmit={handleSubmit}
-            className="mt-6 flex w-full flex-col gap-4 md:mx-auto md:w-3/4 md:flex-row md:gap-0 lg:mt-0 lg:w-6/12 xl:w-5/12"
-          >
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => {
-                setEmail(e.target.value)
-              }}
-              required
-              placeholder="Enter email address"
-              className="w-full rounded-full py-4 pl-5 font-bold text-blue-900 shadow-xl"
-            />
-            <Button className="w-full shadow-xl md:-ml-10 md:w-auto">
-              Schedule a Demo
-            </Button>
-          </form>
+      {key !== "default" ? (
+        <div className="pb-20">
+          <div className="container mx-auto flex flex-col items-center justify-center px-6 text-center lg:flex-row lg:text-left">
+            <h2 className="lg:w-6/12 xl:w-7/12">Ready to Start?</h2>
+            <form
+              onSubmit={handleSubmit}
+              className="mt-6 flex w-full flex-col gap-4 md:mx-auto md:w-3/4 md:flex-row md:gap-0 lg:mt-0 lg:w-6/12 xl:w-5/12"
+            >
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value)
+                }}
+                required
+                placeholder="Enter email address"
+                className="w-full rounded-full py-4 pl-5 font-bold text-blue-900 shadow-xl"
+              />
+              <Button className="w-full shadow-xl md:-ml-10 md:w-auto">
+                Schedule a Demo
+              </Button>
+            </form>
+          </div>
         </div>
-      </div>
+      ) : null}
       <footer className="relative z-10 overflow-hidden bg-black pt-10">
         <div className="container mx-auto flex flex-col items-center px-6 pb-10 md:flex-row md:justify-between">
           <div className="items-center justify-center md:flex md:gap-16">

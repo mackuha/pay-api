@@ -1,15 +1,9 @@
 import React from "react"
-import circleBg from "/shared/bg-pattern-circle.svg"
 import teamImg from "/about/img-team-members.png"
 
 function About() {
   return (
-    <div className="relative pb-20 pt-10">
-      <img
-        src={circleBg}
-        alt="Background pattern circle"
-        className="absolute -right-[200px] -top-[380px] -z-10 md:-right-[450px] md:-top-[680px] lg:-right-[300px] lg:-top-[700px]"
-      />
+    <div className="pb-20 pt-10">
       <div className="container mx-auto px-6 lg:max-w-5xl">
         <h1 className="text-center lg:w-8/12 lg:text-left">
           We empower innovators by delivering access to the financial system
@@ -48,15 +42,15 @@ function About() {
         <div className="grid space-y-8 text-center md:grid-cols-3 md:gap-10 md:space-y-0 md:text-left">
           <div className="border-blue-900/20 py-4 md:border-y-[1px]">
             <p className="opacity-70">Team Members</p>
-            <h2 className="text-[56px] text-pink-700">300+</h2>
+            <h2 className="mt-2 text-[56px] text-pink-700">300+</h2>
           </div>
           <div className="border-blue-900/20 py-4 md:border-y-[1px]">
             <p className="opacity-70">Offices in the US</p>
-            <h2 className="text-[56px] text-pink-700">3</h2>
+            <h2 className="mt-2 text-[56px] text-pink-700">3</h2>
           </div>
           <div className="border-blue-900/20 py-4 md:border-y-[1px]">
             <p className="opacity-70">Transactions analyzed</p>
-            <h2 className="text-[56px] text-pink-700">10M+</h2>
+            <h2 className="mt-2 text-[56px] text-pink-700">10M+</h2>
           </div>
         </div>
         <div className="my-6 h-[1px] w-full bg-black opacity-20 md:hidden"></div>

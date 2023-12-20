@@ -1,6 +1,5 @@
 import React, { useId, useState } from "react"
-import circleBg from "/shared/bg-pattern-circle.svg"
-import CompanyLogos from "../components/CompanyLogos"
+import CompanyLogos from "../components/ui/CompanyLogos"
 import Button from "../components/ui/Button"
 
 function Contact() {
@@ -37,12 +36,7 @@ function Contact() {
   }
 
   return (
-    <div className="relative pb-20 pt-10">
-      <img
-        src={circleBg}
-        alt="Background pattern circle"
-        className="absolute -right-[200px] -top-[380px] -z-10 md:-right-[450px] md:-top-[680px] lg:-right-[300px] lg:-top-[700px]"
-      />
+    <div className="pb-20 pt-10">
       <div className="container mx-auto px-6">
         <h1 className="mx-auto text-center md:max-w-xl lg:ml-0 lg:text-left">
           Submit a help request and we’ll get in touch shortly.

@@ -1,24 +1,17 @@
 import React, { useState } from "react"
 import phoneMockup from "/home/illustration-phone-mockup.svg"
 import circleBg from "/shared/bg-pattern-circle.svg"
-
 import easyToImplementImg from "/home/illustration-easy-to-implement.svg"
 import simpleUiImg from "/home/illustration-simple-ui.svg"
 import financesIcon from "/home/icon-personal-finances.svg"
 import bankingIcon from "/home/icon-banking-and-coverage.svg"
 import paymentsIcon from "/home/icon-consumer-payments.svg"
-import CompanyLogos from "../components/CompanyLogos"
+import CompanyLogos from "../components/ui/CompanyLogos"
 import Button from "../components/ui/Button"
 import { Link } from "react-router-dom"
+import ScheduleInlineForm from "../components/ui/ScheduleInlineForm"
 
 function Home() {
-  const [email, setEmail] = useState("")
-
-  function handleSubmit(e) {
-    e.preventDefault()
-    setEmail("")
-  }
-
   return (
     <div>
       <div className="relative overflow-x-clip">
@@ -34,24 +27,9 @@ function Home() {
             <h1 className="text-[32px] leading-9 md:mx-auto md:w-3/4 md:text-5xl md:leading-[56px] lg:w-full xl:text-[72px] xl:leading-[72px]">
               Start building with our APIs for absolutely free.
             </h1>
-            <form
-              onSubmit={handleSubmit}
-              className="mt-6 flex flex-col gap-4 md:mx-auto md:w-3/4 md:flex-row md:gap-0 lg:ml-0 lg:mt-8 lg:w-10/12"
-            >
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value)
-                }}
-                required
-                placeholder="Enter email address"
-                className="w-full rounded-full py-4 pl-5 font-bold text-blue-900 shadow-xl"
-              />
-              <Button className="w-full shadow-xl md:-ml-10 md:w-auto">
-                Schedule a Demo
-              </Button>
-            </form>
+            <div className="mt-6 md:mx-auto md:w-3/4 lg:ml-0 lg:mt-8 lg:w-10/12">
+              <ScheduleInlineForm />
+            </div>
             <p className="mt-6 lg:mt-4">
               Have any questions?{" "}
               <Link
