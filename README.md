@@ -13,12 +13,7 @@ PayAPI is a multi-page website developed as a part of the Frontend Mentor challe
 
 ## Deployment
 
-The app is deployed on Netlify. Visit [Add live site link](https://science-trivia-mackuha.netlify.app/)
-
-
-## Solution Link
-
-You can take a look at the solution URL here [Add solution URL here](https://your-solution-url.com)
+The app is deployed on Netlify. Visit the live site [here.](https://pay-api-mackuha.netlify.app/)
 
 
 ## Credits
