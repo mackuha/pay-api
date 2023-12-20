@@ -1,6 +1,5 @@
-import React, { useState } from "react"
-import { Link, NavLink, useLocation } from "react-router-dom"
-import Button from "./ui/Button"
+import React from "react"
+import { Link, NavLink } from "react-router-dom"
 import ScheduleInlineForm from "./ui/ScheduleInlineForm"
 import circleBg from "/shared/bg-pattern-circle.svg"
 import facebookLogo from "/shared/facebook.svg"
